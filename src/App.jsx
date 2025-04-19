@@ -33,7 +33,7 @@ function App() {
                   <Carousel.Item>
                     <img
                       className="d-block w-100"
-                      src="/images/pasta.jpg"
+                      src="/images2/pasta.jpg"
                       alt="First recipe"
                     />
                     <Carousel.Caption>
@@ -45,7 +45,7 @@ function App() {
                   <Carousel.Item>
                     <img
                       className="d-block w-100"
-                      src="/images/4.jpg"
+                      src="/images2/4.jpg"
                       alt="Second recipe"
                     />
                     <Carousel.Caption>
@@ -57,7 +57,7 @@ function App() {
                   <Carousel.Item>
                     <img
                       className="d-block w-100"
-                      src="/images/desert.jpg"
+                      src="/images2/desert.jpg"
                       alt="Third recipe"
                     />
                     <Carousel.Caption>
