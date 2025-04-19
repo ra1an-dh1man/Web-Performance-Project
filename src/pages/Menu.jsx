@@ -6,6 +6,7 @@ import recipeData from "./recipeDataThumbnail";
 import { useWishlist } from "./WishlistContext";
 import LazyLoad from "react-lazyload";
 
+
 const Menu = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();
   const [searchQuery, setSearchQuery] = useState("");

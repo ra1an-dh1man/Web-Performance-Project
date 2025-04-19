@@ -1,5 +1,9 @@
 .navbar {
-    background-image: url('/images/navbarBG.jpg');
+    background-image: url('images2/navBG.png');
+    background-size: cover;
+    /* background-position: center; */
+    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +15,7 @@
   .navbar h2 {
 
     font-family: 'Segoe UI', sans-serif;
-    color: #ff5722;
+    color: #ff3c00;
   }
   
   .menu-button {
@@ -54,3 +58,16 @@
     background-color: #e64a19;
   }
   
+  .back-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #e64a19;
+  }
