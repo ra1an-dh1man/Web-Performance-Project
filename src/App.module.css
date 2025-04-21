@@ -1,3 +1,9 @@
+
+body {
+  font-family: 'PlaywriteRO', sans-serif;
+}
+
+
 .landingPage {
   background-image: url('/images/background.jpg'); 
   background-size: cover;

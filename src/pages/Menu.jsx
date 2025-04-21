@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, Button, Col, Row, Form, InputGroup } from "react-bootstrap";
 import styles from "./Menu.module.css";
-import recipeData from "./recipeDataThumbnail";
+// import recipeData from "./recipeDataThumbnail";
 import { useWishlist } from "./WishlistContext";
 import LazyLoad from "react-lazyload";
+import recipeDataEnglish from "./recipeDataThumbnail";
+import recipeDataHindi from "./recipeDataThumbnailHindi";
+import { useLanguage } from "../components/LanguageContext"; // ✅ Import
 
 
 const Menu = () => {
+  const { language } = useLanguage(); // ✅ Get current language
+  const recipeData = language === "en" ? recipeDataEnglish : recipeDataHindi;
   const { toggleWishlist, isWishlisted } = useWishlist();
   const [searchQuery, setSearchQuery] = useState("");
 

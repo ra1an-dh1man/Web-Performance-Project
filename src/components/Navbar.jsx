@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-
+import { useLanguage } from "./LanguageContext";
 const Navbar = () => {
   const location = useLocation(); 
   const { pathname } = location;
+  const { language, toggleLanguage } = useLanguage(); // ✅ Access context
 
   return (
     <nav className="navbar">
@@ -27,6 +28,10 @@ const Navbar = () => {
             <button className="back-button">🔙 Back to Menu</button>
           </Link>
         )}
+
+        <button className="lang" onClick={toggleLanguage}>
+          {language === "en" ? "🌐 हिन्दी में बदलें" : "🌐 Switch to English"}
+        </button>
       </div>
     </nav>
   );

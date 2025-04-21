@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
-
+import './font.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Menu from "./pages/Menu";

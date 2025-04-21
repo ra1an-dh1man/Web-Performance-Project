@@ -1,30 +1,31 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './RecipeDetails.module.css';
-import recipeData from './recipeData';
+import recipeDataEnglish from './recipeData'; // Ensure this is the English recipe data file
+import recipeDataHindi from './recipeDataHindi'; // Ensure this is the Hindi recipe data file
+import { useLanguage } from '../components/LanguageContext'; // ✅ Import the LanguageContext
 
 const RecipeDetails = () => {
   const { id } = useParams();
+  const { language } = useLanguage(); // ✅ Get the current language from the context
+  const recipeData = language === 'en' ? recipeDataEnglish : recipeDataHindi; // ✅ Choose data based on language
   const recipe = recipeData.find((r) => r.id === parseInt(id));
 
   const [playlist, setPlaylist] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [language, setLanguage] = useState('');
   const audioRef = useRef(null);
 
   const getMusicFiles = (lang) => {
     const folderPath = `/music/${lang}_music`;
     const files = [];
-  
+
     for (let i = 1; i <= 5; i++) {
       files.push(`${folderPath}/track${i}.mp3`);
     }
-  
+
     setPlaylist(files);
   };
-  
-  
 
   useEffect(() => {
     if (playlist.length > 0 && isPlaying) {
@@ -40,9 +41,8 @@ const RecipeDetails = () => {
   }, [playlist]);
 
   const playMusic = (lang) => {
-    setLanguage(lang);
-    getMusicFiles(lang); 
-    setCurrentTrack(0); 
+    getMusicFiles(lang);
+    setCurrentTrack(0);
     setIsPlaying(true);
   };
 
@@ -59,7 +59,6 @@ const RecipeDetails = () => {
     setCurrentTrack(0);
   };
 
-  // Handle song change when current track ends
   const handleEnded = () => {
     setCurrentTrack((prev) => (prev + 1) % playlist.length);
   };
@@ -76,27 +75,43 @@ const RecipeDetails = () => {
     <div className={styles.recipeDetails}>
       <center>
         <h2>{recipe.name}</h2>
-      </center> 
+      </center>
       <img src={recipe.image} alt={recipe.name} className={styles.recipeImage} />
-      
+
       <div className={styles.recipeInfo}>
-        <p><strong>Cooking Time:</strong> {recipe.cookingTime}</p>
-        <p><strong>Difficulty:</strong> {recipe.level}</p>
-        <p><strong>Calories:</strong> {recipe.calories}</p>
+        <p>
+          <strong>Cooking Time:</strong> {recipe.cookingTime}
+        </p>
+        <p>
+          <strong>Difficulty:</strong> {recipe.level}
+        </p>
+        <p>
+          <strong>Calories:</strong> {recipe.calories}
+        </p>
       </div>
 
       <div className={styles.musicControls}>
         {!isPlaying ? (
           <>
             <p className={styles.musicLabel}>🎵 Focus music:</p>
-            <button className={styles.musicButton} onClick={() => playMusic('english')}>🎶 Play English Music</button>
-            <button className={styles.musicButton} onClick={() => playMusic('hindi')}>🎶 Play Hindi Music</button>
+            <button
+              className={styles.musicButton}
+              onClick={() => playMusic(language === 'en' ? 'english' : 'hindi')}
+            >
+              🎶 Play {language === 'en' ? 'English' : 'Hindi'} Music
+            </button>
           </>
         ) : (
           <>
-            <p className={styles.musicLabel}>Now playing: {language} track {currentTrack + 1}</p>
-            <button className={styles.musicButton} onClick={pauseMusic}>⏸️ Pause</button>
-            <button className={styles.musicButton} onClick={stopMusic}>⏹️ Stop</button>
+            <p className={styles.musicLabel}>
+              Now playing: {language} track {currentTrack + 1}
+            </p>
+            <button className={styles.musicButton} onClick={pauseMusic}>
+              ⏸️ Pause
+            </button>
+            <button className={styles.musicButton} onClick={stopMusic}>
+              ⏹️ Stop
+            </button>
           </>
         )}
         <audio ref={audioRef} controls={false} />

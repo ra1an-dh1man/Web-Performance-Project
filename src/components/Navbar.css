@@ -1,9 +1,6 @@
 .navbar {
     background-image: url('images2/navBG.png');
     background-size: cover;
-    /* background-position: center; */
-    
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,8 +10,7 @@
   }
   
   .navbar h2 {
-
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ff3c00;
   }
   
@@ -69,5 +65,19 @@
   }
   
   .back-button:hover {
+    background-color: #e64a19;
+  }
+
+  .lang{
+    padding: 0.5rem 1rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .lang:hover {
     background-color: #e64a19;
   }
