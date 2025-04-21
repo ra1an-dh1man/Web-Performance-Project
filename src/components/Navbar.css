@@ -1,83 +1,83 @@
 .navbar {
-    background-image: url('images2/navBG.png');
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff8f0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ff3c00;
-  }
-  
-  .menu-button {
-    padding: 0.5rem 1rem;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .menu-button:hover {
-    background-color: #e64a19;
-  }
+  background-image: url(images2/navBG.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff8f0;
+  box-shadow: 0 2px 5px #0000001a;
+}
 
-  .wishlist-button {
-    padding: 0.5rem 1rem;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .wishlist-button:hover {
-    background-color: #e64a19;
-  }
+.navbar h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ff3c00;
+}
 
-  .random-button {
-    padding: 0.5rem 1rem;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .random-button:hover {
-    background-color: #e64a19;
-  }
-  
-  .back-button {
-    padding: 0.5rem 1rem;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .back-button:hover {
-    background-color: #e64a19;
-  }
+.menu-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .lang{
-    padding: 0.5rem 1rem;
-    background-color: #ff5722;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .lang:hover {
-    background-color: #e64a19;
-  }
+.menu-button:hover {
+  background-color: #e64a19;
+}
+
+.wishlist-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-button:hover {
+  background-color: #e64a19;
+}
+
+.random-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.random-button:hover {
+  background-color: #e64a19;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.back-button:hover {
+  background-color: #e64a19;
+}
+
+.lang {
+  padding: 0.5rem 1rem;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.lang:hover {
+  background-color: #e64a19;
+}

@@ -1,60 +1,58 @@
-
 body {
-  font-family: 'PlaywriteRO', sans-serif;
+  font-family: "PlaywriteRO", sans-serif;
 }
 
-
 .landingPage {
-  background-image: url('/images/background.jpg'); 
+  background-image: url(/images/background.jpg);
   background-size: cover;
   background-position: center;
-  height: 91vh; 
-  color: white;
+  height: 91vh;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px; 
-  background-attachment: fixed; 
+  padding: 0 20px;
+  background-attachment: fixed;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: #0009;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 90%; 
+  max-width: 90%;
   width: 600px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 button.menu-button {
   padding: 1rem 2rem;
   font-size: 1.1rem;
-  background-color: #ff6347; 
+  background-color: #ff6347;
   border: none;
-  color: white;
+  color: #fff;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 button.menu-button:hover {
-  background-color: #ff4500; 
-  transform: scale(1.05); 
+  background-color: #ff4500;
+  transform: scale(1.05);
 }
 
 button.menu-button:focus {
@@ -69,11 +67,11 @@ button.menu-button:focus {
 .carousel-item img {
   border-radius: 10px;
   object-fit: cover;
-  height: 400px; 
+  height: 400px;
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: #00000080;
   padding: 1rem;
   border-radius: 5px;
   bottom: 20px;
@@ -90,7 +88,7 @@ button.menu-button:focus {
 
 @media (max-width: 768px) {
   .landingPage {
-    height: auto; 
+    height: auto;
     padding: 20px 0;
   }
 
@@ -125,5 +123,3 @@ button.menu-button:focus {
     font-size: 1rem;
   }
 }
-
-
